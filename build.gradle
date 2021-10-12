@@ -15,6 +15,9 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+    // Diskort
+    implementation("com.jessecorbett:diskord-bot:2.1.1")
 }
 
 test {
