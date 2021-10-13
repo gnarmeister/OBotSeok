@@ -17,18 +17,3 @@ class HttpRequestHelper {
             response.readText()
         }
     }
-
-suspend fun main() {
-    val targetString = HttpRequestHelper()
-        .get("https://loawa.com/main/")
-        .split("\n")
-        .find { it.contains("<p class=\" text-theme-0") }!!
-
-    "<strong>.{1,10}</strong>"
-        .toRegex()
-        .findAll(targetString)
-        .forEach {
-            println(it.value)
-        }
-
-}
