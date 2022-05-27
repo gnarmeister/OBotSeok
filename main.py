@@ -1,6 +1,7 @@
 from bot.client import OBotSeok
+import os
 
-TOKEN = ""
+TOKEN = os.environ.get("TOKEN")
 
 
 def main():
