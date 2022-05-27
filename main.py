@@ -1,10 +1,10 @@
-from pydoc import cli
-from bot import client
+from bot.client import OBotSeok
 
 TOKEN = "ODk3Mzk4OTU5MzAyMTMxNzEy.GfgAj0.Yt9nPxfaEN213_oR5ovY1BNAPf8A9_ulEKpSHo"
 
 
 def main():
+    client = OBotSeok()
     client.run(TOKEN)
 
 
