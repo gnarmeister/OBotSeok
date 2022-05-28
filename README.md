@@ -1,5 +1,5 @@
 # OBotSeok
-당신은 로봇인가요?  
-`네, 저는 로봇입니다.`  
+Are you a robot? 
+`Yes, I am a robot.`  
   
-*디스코드 봇 오봇석*
+*Discord bot OBotSeok*
