@@ -8,7 +8,7 @@ async def command_github(message: discord.Message):
 async def command_help(message: discord.Message):
     s = ""
     for command in command_dict:
-        s += "`!{}` {}\n".format(command, command_dict[command]["description"])
+        s += "`!{}`\t{}\n".format(command, command_dict[command]["description"])
     await message.channel.send(s)
 
 
