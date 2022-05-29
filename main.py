@@ -1,7 +1,9 @@
 from bot.client import OBotSeok
 import os
+from dotenv import load_dotenv
 
-TOKEN = os.environ.get("TOKEN")
+load_dotenv()
+TOKEN = os.getenv("TOKEN")
 
 
 def main():
