@@ -13,9 +13,14 @@ async def command_help(message: discord.Message):
 
 
 async def command_sylvanas(message: discord.Message):
-    voice_channel = message.guild.voice_channels[0]
-    voice_client = await voice_channel.connect()
-    print(voice_client)
+    voice_channels: list[discord.VoiceChannel] = message.guild.voice_channels
+    for i in range(len(voice_channels)):
+        if len(voice_channels[i].members) > 0:
+            voice_channel = voice_channels[i]
+
+    voice_client: discord.VoiceClient = await voice_channel.connect()
+    # TODO: 실바나스~ 재생
+    voice_client.disconnect()
 
 
 command_dict = {
