@@ -15,18 +15,12 @@ async def command_help(message: discord.Message):
 
 async def command_sylvanas(message: discord.Message):
     channels: list[discord.VoiceChannel] = message.guild.voice_channels
-    try:
-        await play_audio("Sylvanas.mp3", channels)
-    except discord.errors.ClientException:
-        await message.channel.send("지금 내가 말하고 있잖아.")
+    await play_audio("Sylvanas.mp3", channels)
 
 
 async def command_leokk(message: discord.Message):
     channels: list[discord.VoiceChannel] = message.guild.voice_channels
-    try:
-        await play_audio("Leokk.mp3", channels)
-    except discord.errors.ClientException:
-        await message.channel.send("지금 내가 말하고 있잖아.")
+    await play_audio("Leokk.mp3", channels)
 
 
 command_dict = {
