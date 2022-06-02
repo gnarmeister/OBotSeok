@@ -10,6 +10,7 @@ async def play_audio(filename: str, message: discord.Message):
     for i in range(len(channels)):
         if len(channels[i].members) > 0:
             voice_channel = channels[i]
+    message.channel.send("channel found")
 
     # connect to voice channel
     voice_client: discord.VoiceClient = await voice_channel.connect()
