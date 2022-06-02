@@ -14,13 +14,13 @@ async def command_help(message: discord.Message):
 
 
 async def command_sylvanas(message: discord.Message):
-    channels: list[discord.VoiceChannel] = message.guild.voice_channels
-    await play_audio("Sylvanas.mp3", channels)
+    # channels: list[discord.VoiceChannel] = message.guild.voice_channels
+    await play_audio("Sylvanas.mp3", message)
 
 
 async def command_leokk(message: discord.Message):
-    channels: list[discord.VoiceChannel] = message.guild.voice_channels
-    await play_audio("Leokk.mp3", channels)
+    # channels: list[discord.VoiceChannel] = message.guild.voice_channels
+    await play_audio("Leokk.mp3", message)
 
 
 command_dict = {
