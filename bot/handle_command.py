@@ -14,13 +14,26 @@ async def command_help(message: discord.Message):
 
 
 async def command_sylvanas(message: discord.Message):
-    return
+    channels: list[discord.VoiceChannel] = message.guild.voice_channels
+    try:
+        await play_audio("Sylvanas.mp3", channels)
+    except discord.errors.ClientException:
+        await message.channel.send("지금 내가 말하고 있잖아.")
+
+
+async def command_leokk(message: discord.Message):
+    channels: list[discord.VoiceChannel] = message.guild.voice_channels
+    try:
+        await play_audio("Leokk.mp3", channels)
+    except discord.errors.ClientException:
+        await message.channel.send("지금 내가 말하고 있잖아.")
 
 
 command_dict = {
     "깃허브": {"function": command_github, "description": "깃허브 저장소 주소"},
     "도움말": {"function": command_help, "description": "도움말"},
-    "실바나스": {"function": command_sylvanas, "description": "오범석의 성우 데뷔작"},
+    "실바나스": {"function": command_sylvanas, "description": "실바나스~"},
+    "레오크": {"function": command_leokk, "description": "아 레오크"},
 }
 
 
