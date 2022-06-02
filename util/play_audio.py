@@ -14,9 +14,6 @@ async def play_audio(filename: str, message: discord.Message):
     # connect to voice channel
     voice_client: discord.VoiceClient = await voice_channel.connect()
 
-    if voice_client.is_playing():
-        return
-
     # play audio file through FFmpeg
     src_path = os.path.join(os.getcwd(), "sound", filename)
     message.channel.send(src_path)
